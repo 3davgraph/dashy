@@ -1,47 +1,286 @@
----
-# Page meta info, like heading, footer text and nav links
+appConfig:
+  language: en
+  layout: auto
+  iconSize: medium
+  theme: glass
 pageInfo:
   title: Dashy
-  description: Welcome to your new dashboard!
-  navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
-appConfig:
-  theme: colorful
-
-# Main content - An array of sections, each containing an array of items
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
-  
+  - name: God's Page
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: God's Page
+        url: https://10.71.86.155:8080/home/
+        target: sametab
+        id: 0_849_godspage
+  - name: AI tools
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Claude
+        icon: https://claude.ai/favicon.ico
+        url: https://claude.ai
+        target: sametab
+        id: 0_731_claude
+      - title: ChatGPT
+        icon: https://chatgpt.com/favicon.ico
+        url: https://chatgpt.com
+        target: sametab
+        id: 1_731_chatgpt
+      - title: Gemini
+        icon: google-gemini.png
+        url: https://gemini.google.com
+        target: sametab
+        id: 2_731_gemini
+      - title: Open Web-UI
+        icon: ollama-dark.png
+        url: http://10.71.86.135:3000/
+        target: sametab
+        id: 3_731_openwebui
+      - title: Duck AI
+        icon: favicon
+        url: >-
+          https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1&atb=v344-1
+        target: sametab
+        id: 4_731_duckai
+      - title: (Local) WebUI
+        icon: ollama-dark.png
+        url: http://localhost:3000
+        id: 5_731_localwebui
+  - name: School
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Smartweb
+        icon: favicon
+        url: https://smartweb.augustatech.edu/
+        target: sametab
+        id: 0_616_smartweb
+      - title: Blackboard
+        icon: favicon
+        url: https://augustatech.blackboard.com/webapps/login/
+        id: 1_616_blackboard
+      - title: Redhat
+        icon: redhat-linux.png
+        url: https://rha.ole.redhat.com/rha/app/
+        target: sametab
+        id: 2_616_redhat
+      - title: Netlab (ng)
+        icon: favicon
+        url: https://netlabve.augustatech.edu/
+        id: 3_616_netlabng
+      - title: Netacad
+        icon: cisco.png
+        url: https://www.netacad.com/
+        target: sametab
+        id: 4_616_netacad
+      - title: AWS
+        icon: aws-light.png
+        url: https://awsacademy.instructure.com/
+        target: sametab
+        id: 5_616_aws
+  - name: Network
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Proxmox
+        icon: proxmox.png
+        url: https://10.71.86.3:8006/
+        target: sametab
+        id: 0_746_proxmox
+      - title: Portainer
+        icon: portainer.png
+        url: https://10.71.86.135:9443/
+        target: sametab
+        id: 1_746_portainer
+      - title: Pi.hole
+        icon: pi-hole.png
+        url: http://10.71.86.99/admin
+        target: sametab
+        id: 2_746_pihole
+      - title: Sane-Scanner
+        icon: scanservjs.png
+        url: http://10.71.86.212:8080/
+        target: sametab
+        id: 3_746_sanescanner
+      - title: Mimic3 (mycroft tts)
+        icon: favicon
+        url: http://10.71.86.135:59125/
+        target: sametab
+        id: 4_746_mimicmycrofttts
+      - title: Zoneminder
+        icon: zoneminder.png
+        url: http://10.71.86.206/zm
+        target: sametab
+        id: 5_746_zoneminder
+      - title: TruNas
+        icon: truenas-scale.png
+        url: http://10.71.86.7/ui/sessions/signin
+        target: sametab
+        id: 6_746_trunas
+      - title: VirusTotal
+        icon: favicon
+        url: https://www.virustotal.com/gui/
+        id: 7_746_virustotal
+  - name: 'Home Automation '
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Home Assistant
+        icon: home-assistant.png
+        url: http://10.71.86.68:8123/
+        target: sametab
+        id: 0_1514_homeassistant
+      - title: Ansible
+        icon: ansible.png
+        url: http://10.71.86.112:3000/
+        target: sametab
+        id: 1_1514_ansible
+  - name: Social Media
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Facebook
+        icon: facebook.png
+        url: http://Facebook.com
+        target: sametab
+        id: 0_1115_facebook
+      - title: Twitter
+        icon: x.png
+        url: http://x.com
+        target: sametab
+        id: 1_1115_twitter
+      - title: Linkedin
+        icon: linkedin.png
+        url: http://Linkedin.com
+        target: sametab
+        id: 2_1115_linkedin
+  - name: Media
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: LMS
+        icon: lyrion.png
+        url: http://10.71.86.132:9000/
+        target: sametab
+        id: 0_480_lms
+      - title: Jellyfin
+        icon: jellyfin.png
+        url: http://10.71.86.135:8096/
+        target: sametab
+        id: 1_480_jellyfin
+      - title: metube
+        icon: metube.png
+        url: http://10.71.86.135:8081/
+        target: sametab
+        id: 2_480_metube
+      - title: YouTube
+        icon: youtube.png
+        url: youtube.com
+        target: newtab
+        id: 3_480_youtube
+      - title: YouTube Music
+        icon: youtube-music.png
+        url: music.youtube.com
+        target: newtab
+        id: 4_480_youtubemusic
+  - name: Development/Lab
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Github
+        icon: favicon
+        url: https://github.com/
+        target: sametab
+        id: 0_1473_github
+      - title: Gitlab
+        icon: gitlab.png
+        id: 1_1473_gitlab
+      - title: vscode
+        icon: vscode.png
+        url: http://10.71.86.135:8080/
+        id: 2_1473_vscode
+  - name: Syncthing
+    icon: syncthing.png
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: website-Syncthing
+        icon: syncthing.png
+        url: https://10.71.86.155:8384/#
+        target: sametab
+        id: 0_951_websitesyncthing
+      - title: Local-syncthing
+        icon: syncthing.png
+        url: https://localhost:8384/#
+        target: sametab
+        id: 1_951_localsyncthing
+  - name: Communication
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Google Messages
+        description: ''
+        icon: google-messages.png
+        url: https://messages.google.com
+        target: sametab
+        id: 0_1366_googlemessages
+      - title: WhatsApp Web
+        icon: whatsapp.png
+        url: https://web.whatsapp.com
+        target: sametab
+        id: 1_1366_whatsappweb
+  - name: Personal Tools
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Google keep
+        icon: google-keep.png
+        url: https://keep.google.com/
+        target: sametab
+        id: 0_1397_googlekeep
